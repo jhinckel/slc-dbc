@@ -26,17 +26,6 @@ public class XmlUtils {
         Object unmarshalObj = jaxbUnmarshaller.unmarshal(inStream);
 
         return unmarshalObj;
-
-//        JAXBContext jc = JAXBContext.newInstance(objectClass);
-//        Unmarshaller unmarshaller = jc.createUnmarshaller();
-//        XMLReader reader = XMLReaderFactory.createXMLReader();
-//        IngoreNamespaceFilter nsFilter = new IngoreNamespaceFilter();
-//        nsFilter.setParent(reader);
-//        StringReader stringReader = new StringReader(sampleXML);
-//        InputSource is = new InputSource(stringReader);
-//        SAXSource source = new SAXSource(nsFilter, is);
-//        System.out.println("" + sampleXML);
-//        return unmarshaller.unmarshal(source);
     }
 
     public static <T> T processXmlGenericNodes(List<JAXBElement<Object>> genericItens, Class<T> mainClass) throws Exception {

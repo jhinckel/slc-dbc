@@ -7,11 +7,3 @@ environment:
 xml:
     folderPath: slc-xmls
     
-database:
-    hsqldb:
-        username: sa
-        password:
-        name: slc
-        file: C:\temp\hsqldb.jar
-    
-    

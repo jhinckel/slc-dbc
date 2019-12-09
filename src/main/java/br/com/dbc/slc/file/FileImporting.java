@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.dbc.slc.bcmsg.BcmsgRepository;
 import br.com.dbc.slc.model.DOC;
-import br.com.dbc.slc.model.SISMSG;
+import br.com.dbc.slc.model.SisMsg;
 import br.com.dbc.slc.sismsg.SismsgRepository;
 import br.com.dbc.slc.xml.XmlUtils;
 
@@ -51,7 +51,7 @@ public class FileImporting {
             try {
                 DOC doc = unmarshalXmlFile(DOC.class, xmlFileContent);
                 List<JAXBElement<Object>> slcItems = doc.getSismsg().getSlcItem();
-                SISMSG xmlGenericNodes = XmlUtils.processXmlGenericNodes(slcItems, SISMSG.class);
+                SisMsg xmlGenericNodes = XmlUtils.processXmlGenericNodes(slcItems, SisMsg.class);
 
                 doc.setSismsg(xmlGenericNodes);
 

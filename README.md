@@ -17,9 +17,12 @@ Solução implementada:<br><br>
     <p>- Criei 2 APIs para retornar os dados inseridos. Uma para retornar o objeto SisMsg e outra para o objeto BcMsg.
   Como não sei como é o relacionamento das duas entidades optei por deixálas separadas. Se necessário podemos criar
   uma nova API para trazer a composição dos dois objetos.</p>
-    <p>- Em virtude de eu não ter já um setup pronto antes de iniciar essa atividade, acabou não dando tempo de me 
-  dedicar aos testes da aplicação. Criei 1 para fins de demonstração de conhecimento que testa o controller da da
-  entidade BcMsg (BcmsgControllerTest);</p>
+    <p>- Procuro separar as classes da aplicação por funcionalidade e não por responsabilidade. Acredito que dessa forma o código
+  de cada módulo/API não fica espalhado pela apliação e mais fácil de fazer uma futura manutenção, vido que o código fica quase todo
+  ele numa mesma pasta;</p>
+    <p>- Em virtude de eu não ter já um esqueleo pronto de um microserviço com JPA funcionando antes de iniciar essa atividade,
+  cabou não sobrando tempo para trabalhar nos testes da aplicação. Criei 1 para fins de demonstração de conhecimento que testa
+  o controller da da entidade BcMsg (BcmsgControllerTest);</p>
     <p>- Também não consegui ver a aplicação funcionando no Heroku. O processo de build e deploy é executado normalmente
   mas a aplicação não fica acessível. Não consegui descobrir se falta alguma configuração para tal. A URL em questão
   é a https://slc-dbc.herokuapp.com/swagger-ui.html. Porém apresenta erro ao ser chamada. Com mais tempo posso olhar
